@@ -4,12 +4,12 @@
 
 **ITDS241 Web Technologies and Application · Lecture 09–11**
 
-อ่านสรุปจบใน ~15 นาที แล้วฝึกข้อสอบ 130 ข้อ ดูผลถูก–ผิดรายข้อได้ทันที
+อ่านสรุปจบใน ~15 นาที แล้วฝึกข้อสอบ 230 ข้อ ดูผลถูก–ผิดรายข้อได้ทันที
 
 ### [▶ กดเปิดอ่าน / ทำข้อสอบเลย](https://thinnaphat-tht.github.io/ITDS241-NodeJS-Quiz/ITDS241-NodeJS-Summary-Quiz.html)
 
 ![Lecture](https://img.shields.io/badge/Lecture-09%E2%80%9311-3b82f6?style=for-the-badge)
-![Questions](https://img.shields.io/badge/ข้อสอบ-130%20ข้อ-2563eb?style=for-the-badge)
+![Questions](https://img.shields.io/badge/ข้อสอบ-230%20ข้อ-2563eb?style=for-the-badge)
 ![Format](https://img.shields.io/badge/HTML-ไฟล์เดียว-1d4ed8?style=for-the-badge)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-60a5fa?style=for-the-badge)
 
@@ -37,7 +37,8 @@
 
 | ชุด | จำนวน | ไว้ทำอะไร |
 |---|---:|---|
-| ซ้อมสอบ | 10 ข้อ | พื้นฐานสุด ลองทำให้จบใน 15 นาที เหมือนสอบจริง (ไม่มีตัวจับเวลาในหน้า) |
+| ซ้อมสอบ 1 | 10 ข้อ | พื้นฐานสุด ลองทำให้จบใน 15 นาที เหมือนสอบจริง (ไม่มีตัวจับเวลาในหน้า) |
+| ซ้อมสอบ 2–6 | 20 ข้อ ต่อชุด | คำถามสั้น ๆ ตรงตัว เน้นเข้าใจเนื้อหา ข้อ 1–7 Lecture 9, ข้อ 8–14 Lecture 10, ข้อ 15–20 Lecture 11 |
 | Part 1 / 2 / 3 | 10 ข้อ ต่อ Part | ทวนทีละ Lecture |
 | ข้อสอบรวม 1 / 2 / 3 | 30 ข้อ ต่อชุด | ข้อ 1–10 Lecture 9, ข้อ 11–20 Lecture 10, ข้อ 21–30 Lecture 11 |
 

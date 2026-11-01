@@ -394,6 +394,122 @@ F3 = [
  ("หลัง INSERT สำเร็จแล้วเรียก `res.redirect('/cis-courses')` จะเกิดอะไร?", ["พาผู้ใช้ไปหน้าแสดงรายวิชาทั้งหมด", "ลบข้อมูลที่เพิ่งเพิ่ม", "ปิดการเชื่อมต่อฐานข้อมูล", "สร้าง cookie ใหม่"], "redirect = ส่งผู้ใช้ไปอีก path"),
  ("คำสั่ง SQL `UPDATE` ใช้ทำอะไร?", ["แก้ไขข้อมูลที่มีอยู่แล้ว", "เพิ่มแถวใหม่", "ดึงข้อมูล", "ลบตาราง"], "SELECT ดึง, INSERT เพิ่ม, UPDATE แก้, DELETE ลบ"),
 ]
+# ซ้อมสอบ 2-6: 20 ข้อ/ชุด ง่าย ตรงตัว  ข้อ 1-7 = L9, 8-14 = L10, 15-20 = L11
+Z1 = [
+ ("Node.js คืออะไร?", ["สภาพแวดล้อมสำหรับรัน JavaScript นอกเบราว์เซอร์", "ภาษาโปรแกรมใหม่ที่ไม่ใช่ JavaScript", "โปรแกรมสร้างฐานข้อมูล", "เว็บเบราว์เซอร์ตัวหนึ่ง"], "Node.js เป็น JavaScript runtime ไม่ใช่ภาษาใหม่"),
+ ("ใช้คำสั่งใดตรวจว่าติดตั้ง Node.js เวอร์ชันอะไร?", ["`node --version`", "`npm start`", "`node app.js`", "`npm init`"], "`node --version` แสดงเวอร์ชันที่ติดตั้ง"),
+ ("โค้ดที่รันในเบราว์เซอร์ของผู้ใช้ เรียกว่าอะไร?", ["Client-side", "Server-side", "Database-side", "Router-side"], "HTML, CSS, JS ในเบราว์เซอร์ = client-side ส่วน Node.js = server-side"),
+ ("Node.js ไม่ต้องรองานอ่านไฟล์หรือฐานข้อมูลให้เสร็จ แต่รับ request ถัดไปได้เลย เรียกว่าอะไร?", ["non-blocking", "blocking", "hardcode", "debugging"], "non-blocking = ไม่ยืนรอ ทำให้รับผู้ใช้ได้ต่อเนื่อง"),
+ ("`module.exports` ใช้ทำอะไร?", ["ส่งออกฟังก์ชันหรือค่าจากไฟล์ ให้ไฟล์อื่นใช้", "นำเข้าไฟล์อื่นมาใช้", "ลบไฟล์", "เปิดเซิร์ฟเวอร์"], "`module.exports` = ส่งออก, `require()` = นำเข้า"),
+ ("`require()` ใช้ทำอะไร?", ["นำเข้า module มาใช้", "ส่งออก module", "สร้างฐานข้อมูล", "ลบ cookie"], "เช่น `const http = require('http')`"),
+ ("`res.statusCode = 200` หมายถึงอะไร?", ["สำเร็จ (OK)", "ไม่พบหน้า", "ไม่มีสิทธิ์เข้าถึง", "เซิร์ฟเวอร์ล่ม"], "200 = OK, 404 = ไม่พบ, 401 = ไม่มีสิทธิ์"),
+ ("Express คืออะไร?", ["Framework ช่วยสร้างเว็บเซิร์ฟเวอร์บน Node.js", "ฐานข้อมูล", "ภาษาโปรแกรม", "โปรแกรมตกแต่งรูป"], "Express ช่วยทำ routing และ API ให้ง่ายขึ้น"),
+ ("`npm init` ทำอะไร?", ["สร้างโปรเจกต์ใหม่และไฟล์ package.json", "รันเซิร์ฟเวอร์", "ลบโปรเจกต์", "ติดตั้ง Express"], "`npm init` ถามข้อมูลทีละข้อ แล้วสร้าง package.json"),
+ ("nodemon ช่วยอะไร?", ["restart เซิร์ฟเวอร์ให้อัตโนมัติเมื่อแก้ไฟล์", "เข้ารหัสรหัสผ่าน", "เชื่อมฐานข้อมูล", "ส่งอีเมล"], "ไม่ต้องกด Ctrl+C แล้วรันใหม่เองทุกครั้ง"),
+ ("`app.get('/', ...)` คือการกำหนดอะไร?", ["route สำหรับ GET ที่ path /", "การติดตั้งแพ็กเกจ", "การเชื่อมฐานข้อมูล", "การลบ cookie"], "route = HTTP method + path"),
+ ("`res.send('Hello')` ทำอะไร?", ["ส่งข้อความ Hello กลับไปให้ผู้ใช้", "พิมพ์ Hello ใน terminal", "บันทึก Hello ลงไฟล์", "ส่งอีเมล"], "พิมพ์ใน terminal ใช้ `console.log()`"),
+ ("ฟอร์มแบบ GET ข้อมูลที่กรอกจะอ่านด้วยอะไร?", ["`req.query`", "`req.body`", "`req.session`", "`req.cookies`"], "GET → `req.query`, POST → `req.body`"),
+ ("ฟอร์มแบบ POST ข้อมูลที่กรอกจะอ่านด้วยอะไร?", ["`req.body`", "`req.query`", "`req.url`", "`req.cookies`"], "POST ส่งข้อมูลใน message body"),
+ (".env คือไฟล์อะไร?", ["ไฟล์เก็บค่าตั้งค่าแบบ key=value เช่น PORT", "ไฟล์รูปภาพ", "ไฟล์ HTML หน้าแรก", "ไฟล์ฐานข้อมูล"], "เก็บค่าที่ไม่อยากเขียนตรง ๆ ในโค้ด เช่น PORT, รหัสผ่าน DB"),
+ ("HTTP เป็น stateless หมายความว่าอย่างไร?", ["แต่ละ request ไม่เกี่ยวข้องกัน เซิร์ฟเวอร์ไม่จำว่าใครเป็นใคร", "เซิร์ฟเวอร์จำผู้ใช้ทุกคนได้เอง", "ส่งข้อมูลได้ครั้งเดียว", "ใช้ได้เฉพาะกับ Node.js"], "จึงต้องมี cookie/session ช่วยจำผู้ใช้"),
+ ("`res.cookie('tokenID', 'abc')` ทำอะไร?", ["สร้าง cookie ชื่อ tokenID", "ลบ cookie", "อ่านค่า cookie", "สร้างตารางในฐานข้อมูล"], "รูปแบบ `res.cookie(ชื่อ, ค่า)`"),
+ ("ต้องการลบ cookie ตอน logout ใช้อะไร?", ["`res.clearCookie()`", "`res.cookie()`", "`req.cookies`", "`res.send()`"], "`clearCookie('ชื่อ')` ลบ cookie ออก"),
+ ("`req.session.username = 'Sam'` ทำอะไร?", ["เก็บค่า username ไว้ใน session ที่ฝั่งเซิร์ฟเวอร์", "เก็บค่าไว้ในไฟล์ .env", "ลบ session", "เปลี่ยนชื่อไฟล์"], "อ่านค่านี้ได้จากทุก route"),
+ ("คำสั่ง SQL `DELETE` ทำอะไร?", ["ลบข้อมูล", "เพิ่มข้อมูล", "ดึงข้อมูล", "แก้ไขข้อมูล"], "SELECT ดึง, INSERT เพิ่ม, UPDATE แก้, DELETE ลบ"),
+]
+
+Z2 = [
+ ("Node.js สร้างอยู่บน JavaScript engine ตัวใด?", ["V8 ของ Chrome", "SpiderMonkey ของ Firefox", "MySQL", "Express"], "Node.js = JavaScript runtime บน V8 engine"),
+ ("รันไฟล์ `app.js` ด้วยคำสั่งใด?", ["`node app.js`", "`npm app.js`", "`run app.js`", "`express app.js`"], "รูปแบบ `node ชื่อไฟล์.js`"),
+ ("Node.js มี `document` และ `window` แบบในเบราว์เซอร์หรือไม่?", ["ไม่มี", "มีทั้งสองอย่าง", "มีเฉพาะ window", "มีเฉพาะ document"], "Node.js ไม่มี DOM จึงไม่มี document / window"),
+ ("งานแบบใดที่ Node.js เหมาะที่สุด?", ["งานรับส่งข้อมูลจำนวนมาก เช่น แชตแบบ real-time", "งานคำนวณคณิตศาสตร์หนัก ๆ", "งานตัดต่อวิดีโอ", "เกม 3D"], "เหมาะกับ I/O หนักและ real-time"),
+ ("`require('./hello')` เครื่องหมาย `./` หมายถึงอะไร?", ["ไฟล์ของเราเองในโฟลเดอร์ปัจจุบัน", "โฟลเดอร์ของ Node.js", "แพ็กเกจจาก npm", "ไฟล์ในอินเทอร์เน็ต"], "ไฟล์ของเราเองต้องใช้ `./` นำหน้า"),
+ ("`fs` module ใช้ทำอะไร?", ["จัดการไฟล์ เช่น อ่าน เขียน ลบ", "สร้างเซิร์ฟเวอร์", "แยกส่วนของ URL", "จัดการ cookie"], "fs = file system"),
+ ("ต้องการสร้างเว็บเซิร์ฟเวอร์ด้วย Node.js เปล่า ๆ (ไม่ใช้ Express) ใช้ module ใด?", ["`http`", "`fs`", "`path`", "`url`"], "`http.createServer()` แล้ว `listen(port)`"),
+ ("Express ช่วยเรื่องอะไรเป็นหลัก?", ["routing และการสร้างเว็บ/API", "วาดกราฟิก", "เล่นเสียง", "บีบอัดไฟล์"], "นอกจากนี้ใช้ร่วมกับ template engine ได้"),
+ ("`npm init -y` ต่างจาก `npm init` อย่างไร?", ["ข้ามคำถาม ใช้ค่า default ให้เลย", "ลบโปรเจกต์", "ติดตั้ง Express", "รันเซิร์ฟเวอร์"], "`-y` = yes กับทุกคำถาม"),
+ ("หลัง clone โปรเจกต์มา ใช้ `npm install` เฉย ๆ (ไม่ใส่ชื่อ) เพื่ออะไร?", ["ติดตั้งแพ็กเกจทั้งหมดที่อยู่ใน package.json", "ลบ node_modules", "สร้างไฟล์ app.js", "เปิดเซิร์ฟเวอร์"], "อ่านรายการ dependencies จาก package.json แล้วลงให้ครบ"),
+ ("`const app = express();` ทำอะไร?", ["สร้างแอป Express", "ติดตั้ง Express", "ปิดเซิร์ฟเวอร์", "เชื่อมต่อ MySQL"], "หลังจากนั้นใช้ `app.get()`, `app.listen()`"),
+ ("ใน `app.listen(port, callback)` ส่วน port คืออะไร?", ["หมายเลขช่องทางที่เซิร์ฟเวอร์รอรับ request", "ชื่อไฟล์", "ชื่อผู้ใช้ฐานข้อมูล", "รหัสผ่าน"], "พอร์ตที่เจอบ่อย: 3000, 8080, 8081"),
+ ("ไฟล์ CSS และรูปภาพที่ส่งให้ผู้ใช้ตรง ๆ ใช้ตัวใดให้บริการ?", ["`express.static`", "`express.json`", "`express.Router`", "`res.cookie`"], "static file ไม่ต้องประมวลผล ส่งไฟล์ไปได้เลย"),
+ ("ในแท็ก `<form>` แอตทริบิวต์ `action` กำหนดอะไร?", ["path ปลายทางที่จะส่งข้อมูลไป", "สีของปุ่ม", "ขนาดตัวอักษร", "ชื่อไฟล์ CSS"], "`action` = ปลายทาง, `method` = GET/POST"),
+ ("ติดตั้งแพ็กเกจ dotenv ด้วยคำสั่งใด?", ["`npm install dotenv`", "`node dotenv`", "`npm start dotenv`", "`express dotenv`"], "รูปแบบ `npm install <ชื่อแพ็กเกจ>`"),
+ ("`dotenv.config()` ทำอะไร?", ["โหลดค่าจากไฟล์ .env เข้ามาใช้", "ลบไฟล์ .env", "เปิดเซิร์ฟเวอร์", "สร้างฐานข้อมูล"], "หลังโหลดแล้วอ่านด้วย `process.env.ชื่อ`"),
+ ("Cookie ถูกเก็บไว้ที่ใด?", ["ที่เบราว์เซอร์ของผู้ใช้ (client)", "ที่เซิร์ฟเวอร์", "ในฐานข้อมูลเท่านั้น", "ในไฟล์ app.js"], "Cookie อยู่ฝั่ง client ส่วน Session อยู่ฝั่ง server"),
+ ("`req.cookies` ใช้ทำอะไร?", ["อ่านค่า cookie ที่เบราว์เซอร์ส่งมา", "สร้าง cookie", "ลบ cookie", "อ่านค่า session"], "ต้องใช้ `cookie-parser` ก่อน จึงจะอ่านได้"),
+ ("แพ็กเกจ `mysql2` ใช้ทำอะไร?", ["เชื่อมต่อ Node.js กับ MySQL", "สร้างหน้าเว็บ", "จัดการ cookie", "ส่งอีเมล"], "ใช้ `connection.query()` ส่ง SQL"),
+ ("คำสั่ง SQL ใดใช้ดึงข้อมูล?", ["SELECT", "INSERT", "UPDATE", "DELETE"], "SELECT = ดึงข้อมูลมาแสดง"),
+]
+
+Z3 = [
+ ("Server-side คืออะไร?", ["โค้ดที่รันบนเซิร์ฟเวอร์ แล้วเลือกว่าจะส่งอะไรกลับไปให้ผู้ใช้", "โค้ดที่รันในเบราว์เซอร์ของผู้ใช้", "ไฟล์รูปภาพ", "สีของหน้าเว็บ"], "Node.js, PHP, Python เป็นตัวอย่างของ server-side"),
+ ("`console.log('Hi')` ใน Node.js จะแสดง Hi ที่ใด?", ["ใน terminal ที่รันโปรแกรม", "ในหน้าเว็บ", "ในไฟล์ .env", "ในฐานข้อมูล"], "Node.js ไม่มี window ข้อความจึงออกที่ terminal"),
+ ("งานแบบใดที่ Node.js ไม่เหมาะ?", ["งานคำนวณหนัก ๆ ที่ใช้ CPU มาก", "แอปแชต", "JSON API", "งานอ่าน/เขียนข้อมูลจำนวนมาก"], "Node.js เป็น single thread งานคำนวณหนักจะทำให้ทุกคนต้องรอ"),
+ ("`__dirname` คืออะไร?", ["path ของโฟลเดอร์ที่ไฟล์นั้นอยู่", "ชื่อผู้ใช้เครื่อง", "เวอร์ชัน Node.js", "ชื่อฐานข้อมูล"], "ใช้ได้ทุกไฟล์โดยไม่ต้อง require"),
+ ("`path` module ใช้ทำอะไร?", ["จัดการที่อยู่ไฟล์ (path) ให้เหมาะกับแต่ละระบบปฏิบัติการ", "สร้างเว็บเซิร์ฟเวอร์", "อ่านไฟล์", "เชื่อมฐานข้อมูล"], "เช่น `path.join()`, `path.extname()`"),
+ ("`fs.writeFile()` ใช้ทำอะไร?", ["เขียนข้อมูลลงไฟล์", "อ่านไฟล์", "ลบไฟล์", "เปิดเซิร์ฟเวอร์"], "readFile = อ่าน, writeFile = เขียน, appendFile = ต่อท้าย"),
+ ("`server.listen(8081)` ทำอะไร?", ["ให้เซิร์ฟเวอร์รอรับ request ที่พอร์ต 8081", "ปิดเซิร์ฟเวอร์", "อ่านไฟล์ 8081 ไฟล์", "ติดตั้งแพ็กเกจ"], "จากนั้นเปิด `http://localhost:8081` ได้"),
+ ("template engine เช่น Pug, EJS ใช้ทำอะไร?", ["แทนตัวแปรในไฟล์ template ด้วยค่าจริงแล้วสร้างเป็นหน้า HTML", "เข้ารหัสรหัสผ่าน", "เชื่อมต่อฐานข้อมูล", "ติดตั้งแพ็กเกจ"], "ทำให้หน้าเว็บเปลี่ยนตามข้อมูลได้ (dynamic)"),
+ ("npm คืออะไร?", ["ตัวจัดการแพ็กเกจของ Node.js", "เว็บเบราว์เซอร์", "ฐานข้อมูล", "ไฟล์ตั้งค่า"], "npm = Node Package Manager"),
+ ("ถ้าไม่ใช้แพ็กเกจนั้นแล้ว ต้องการเอาออก ใช้คำสั่งใด?", ["`npm uninstall <ชื่อแพ็กเกจ>`", "`npm install <ชื่อแพ็กเกจ>`", "`npm init`", "`npm start`"], "install = ติดตั้ง, uninstall = ถอนออก"),
+ ("ไฟล์ `package.json` เก็บอะไร?", ["ข้อมูลโปรเจกต์และรายการแพ็กเกจที่ใช้", "รหัสผ่านผู้ใช้", "รูปภาพ", "ข้อมูลในฐานข้อมูล"], "มีชื่อโปรเจกต์ entry point scripts และ dependencies"),
+ ("`res.sendFile()` ใช้ทำอะไร?", ["ส่งไฟล์ เช่น หน้า HTML กลับไปให้ผู้ใช้", "ลบไฟล์", "สร้างไฟล์ใหม่", "เปลี่ยนชื่อไฟล์"], "เช่น ส่ง `shabu.html` ตอนเข้า /shabu"),
+ ("route ที่ดักเส้นทางซึ่งไม่มี route ไหนรับ (ตอบ 404) ควรวางไว้ตรงไหน?", ["ท้ายสุดของ routes ทั้งหมด", "บนสุดของไฟล์", "ในไฟล์ .env", "ไม่ต้องวาง"], "ถ้าวางไว้ก่อน มันจะดักทุก path ไปหมด route อื่นจะไม่ได้ทำงาน"),
+ ("ฟอร์มที่ใช้ method POST ส่งข้อมูลไปที่ใด?", ["ใน message body ของ request", "ต่อท้าย URL", "ใน cookie", "ในไฟล์ CSS"], "GET = ต่อท้าย URL, POST = ใน body"),
+ ("ในโค้ดอ่านค่า PORT ที่เก็บไว้ใน .env ใช้อะไร?", ["`process.env.PORT`", "`req.env.PORT`", "`dotenv.PORT`", "`res.PORT`"], "หลังเรียก `dotenv.config()`"),
+ ("Session ถูกเก็บไว้ที่ใด?", ["ที่เซิร์ฟเวอร์", "ที่เบราว์เซอร์ของผู้ใช้", "ใน URL", "ในไฟล์ CSS"], "จึงปลอดภัยกว่า cookie"),
+ ("แพ็กเกจใดใช้จัดการ session ใน Express?", ["`express-session`", "`cookie-parser`", "`mysql2`", "`dotenv`"], "`cookie-parser` ใช้อ่าน cookie"),
+ ("`maxAge` ของ cookie ใช้กำหนดอะไร?", ["อายุของ cookie (หน่วยมิลลิวินาที)", "ขนาดของ cookie", "ชื่อของ cookie", "สีของ cookie"], "เช่น `{ maxAge: 360000 }`"),
+ ("MySQL Workbench ใช้ทำอะไร?", ["จัดการฐานข้อมูล MySQL ผ่านหน้าจอ", "เขียนโค้ด Node.js", "ติดตั้ง Express", "เปิดเว็บเบราว์เซอร์"], "ใช้สร้างฐานข้อมูล ตาราง และผู้ใช้"),
+ ("คำสั่ง SQL ใดใช้เพิ่มข้อมูลแถวใหม่?", ["INSERT", "SELECT", "DELETE", "UPDATE"], "INSERT = เพิ่ม"),
+]
+
+Z4 = [
+ ("`__filename` ให้ค่าอะไร?", ["path เต็มของไฟล์ที่กำลังรัน", "ชื่อโฟลเดอร์", "ชื่อผู้ใช้", "เวอร์ชัน Node.js"], "`__dirname` = โฟลเดอร์, `__filename` = ไฟล์"),
+ ("ใน Node.js ไฟล์ JavaScript 1 ไฟล์ถือเป็นอะไร?", ["1 module", "1 โปรเจกต์", "1 ฐานข้อมูล", "1 เซิร์ฟเวอร์"], "ตัวแปรในไฟล์เป็น private ชื่อซ้ำข้ามไฟล์ไม่ทับกัน"),
+ ("`path.extname('photo.png')` ให้ผลลัพธ์อะไร?", ["`.png`", "`photo`", "`photo.png`", "`/`"], "`extname` คืนนามสกุลไฟล์"),
+ ("ใน fs module ฟังก์ชัน `unlink` ทำอะไร?", ["ลบไฟล์", "อ่านไฟล์", "เขียนไฟล์", "ต่อท้ายไฟล์"], "unlink = ลบ, rename = เปลี่ยนชื่อ"),
+ ("`readFileSync` เป็นการอ่านไฟล์แบบใด?", ["Sync: รอจนอ่านเสร็จก่อนทำบรรทัดต่อไป", "Async: ไม่รอ", "อ่านเฉพาะบรรทัดแรก", "อ่านจากอินเทอร์เน็ต"], "Sync = blocking ลำดับแน่นอน แต่หยุดงานอื่นไว้"),
+ ("ใน `createServer((req, res) => ...)` `req.url` คืออะไร?", ["path ที่ผู้ใช้ร้องขอ เช่น /shabu", "ข้อความที่จะตอบกลับ", "ชื่อไฟล์", "รหัสสถานะ"], "`req` = สิ่งที่ขอมา, `res` = สิ่งที่ตอบกลับ"),
+ ("`res.setHeader('Content-Type', 'text/html')` บอกเบราว์เซอร์ว่าอะไร?", ["สิ่งที่ส่งกลับไปเป็นหน้า HTML", "เกิด error", "ให้ลบ cookie", "ให้ปิดเซิร์ฟเวอร์"], "`text/plain` = ข้อความธรรมดา"),
+ ("โฟลเดอร์ `node_modules` เก็บอะไร?", ["แพ็กเกจที่ติดตั้งด้วย npm", "ไฟล์ HTML", "รูปภาพ", "ข้อมูลผู้ใช้"], "ตัวไฟล์แพ็กเกจอยู่ที่นี่ รายชื่ออยู่ใน package.json"),
+ ("ไฟล์ `app.js` ในโปรเจกต์ Express มักทำหน้าที่อะไร?", ["เป็นไฟล์หลัก มี routes และตั้งค่าเซิร์ฟเวอร์", "เก็บรูปภาพ", "เก็บรหัสผ่าน", "เป็นฐานข้อมูล"], "รันด้วย `node app.js` หรือ `npm start`"),
+ ("ถ้าตั้ง `\"start\": \"nodemon app.js\"` ใน scripts จะรันโปรเจกต์ด้วยคำสั่งใด?", ["`npm start`", "`npm init`", "`npm install`", "`npm uninstall`"], "scripts ใน package.json เรียกใช้ด้วย `npm start`"),
+ ("`express.Router()` ใช้ทำอะไร?", ["สร้างตัวจัดการ route แยกเป็นกลุ่ม", "เชื่อมต่อฐานข้อมูล", "สร้าง cookie", "ลบไฟล์"], "ช่วยแยก routes ให้โค้ดไม่รกใน app.js"),
+ ("middleware คืออะไร?", ["ฟังก์ชันที่เข้าถึง req และ res ระหว่างที่ request ผ่านเข้ามา", "ฐานข้อมูล", "ไฟล์ CSS", "ชื่อโฟลเดอร์"], "เช่น `express.json()`, `cookie-parser`"),
+ ("แอตทริบิวต์ `name` ของ `<input>` สำคัญอย่างไร?", ["server ใช้ชื่อนี้อ่านค่าที่ผู้ใช้กรอก", "กำหนดสีช่องกรอก", "กำหนดขนาดช่อง", "ไม่มีผลอะไร"], "`name=\"fname\"` → `req.query.fname` หรือ `req.body.fname`"),
+ ("ถ้าฟอร์มส่งรหัสผ่าน ไม่ควรใช้ GET เพราะอะไร?", ["ข้อมูลจะไปแสดงใน URL ใครก็มองเห็น", "GET ช้าเกินไป", "GET ใช้ไม่ได้กับ Node.js", "GET ส่งข้อมูลไม่ได้"], "ควรใช้ POST"),
+ ("ทำไมไม่ควรอัปโหลดไฟล์ `.env` ขึ้นที่สาธารณะ เช่น GitHub?", ["เพราะมีข้อมูลลับ เช่น รหัสผ่านฐานข้อมูล", "เพราะไฟล์ใหญ่", "เพราะรันไม่ได้", "เพราะเป็นรูปภาพ"], ".env เก็บ DB_PASSWORD, SESSION_SECRET ฯลฯ"),
+ ("แพ็กเกจ `cookie-parser` ใช้ทำอะไร?", ["ช่วยให้อ่านค่า cookie ผ่าน `req.cookies` ได้", "จัดการ session", "เชื่อมฐานข้อมูล", "สร้างเซิร์ฟเวอร์"], "ต้องใช้ก่อนอ่าน `req.cookies`"),
+ ("เซิร์ฟเวอร์ส่ง cookie ให้เบราว์เซอร์ผ่าน HTTP header ชื่ออะไร?", ["`Set-Cookie`", "`Get-Cookie`", "`Send-Cookie`", "`Cookie-Server`"], "เบราว์เซอร์เก็บไว้ แล้วส่งกลับใน header `Cookie` ทุก request"),
+ ("MemoryStore ที่เป็นค่า default ของ session เหมาะกับงานแบบใด?", ["ช่วงพัฒนา/ทดสอบ ไม่ควรใช้บน production", "ใช้งานจริงบน production", "เก็บรูปภาพ", "เก็บ cookie"], "เก็บใน memory ของเซิร์ฟเวอร์ restart แล้วหาย"),
+ ("`connection.query(sql, callback)` ทำอะไร?", ["ส่งคำสั่ง SQL ไปให้ฐานข้อมูลทำงาน", "สร้างไฟล์ .env", "ปิดเซิร์ฟเวอร์", "ลบ cookie"], "callback รับ `(error, results)`"),
+ ("คำสั่ง SQL `UPDATE` ทำอะไร?", ["แก้ไขข้อมูลที่มีอยู่แล้ว", "เพิ่มแถวใหม่", "ลบตาราง", "ดึงข้อมูล"], "UPDATE = แก้ไข"),
+]
+
+Z5 = [
+ ("`url` module ใช้ทำอะไร?", ["แยกส่วนต่าง ๆ ของ URL เช่น host, port, pathname", "สร้างเซิร์ฟเวอร์", "อ่านไฟล์", "ลบไฟล์"], "`new URL(str)` แล้วดู `.host` `.port` `.pathname`"),
+ ("การอ่านไฟล์แบบ Async (ใช้ callback) ต่างจาก Sync อย่างไร?", ["ไม่ต้องรอ ทำงานอื่นต่อได้ แต่ลำดับผลลัพธ์อาจสลับกัน", "รอจนเสร็จก่อนเสมอ", "อ่านได้เฉพาะไฟล์เล็ก", "ใช้ไม่ได้ใน Node.js"], "Async = non-blocking"),
+ ("การเขียน callback ซ้อนกันหลายชั้นจนอ่านยาก เรียกว่าอะไร?", ["Callback Hell", "Event Loop", "Middleware", "Hardcode"], "ซ้อนเป็นขั้นบันได `})` อ่านและดูแลยาก"),
+ ("สิ่งใดช่วยแก้ปัญหา callback hell?", ["Promise และ async/await", "เพิ่ม callback ให้มากขึ้น", "ลบ error handling", "ใช้ Sync ทุกที่โดยไม่คิด"], "Promise / async-await ทำให้โค้ดอ่านเป็นลำดับตรง ๆ"),
+ ("`res.end()` ทำอะไร?", ["จบการตอบกลับ ส่ง response ให้ผู้ใช้เสร็จ", "ปิดโปรแกรม Node.js", "ลบไฟล์", "ปิดฐานข้อมูล"], "ถ้าไม่เรียก เบราว์เซอร์จะรอตอบกลับค้างอยู่"),
+ ("`localhost` หมายถึงอะไร?", ["เครื่องคอมพิวเตอร์ของเราเอง", "เซิร์ฟเวอร์ของ Google", "ชื่อไฟล์ HTML", "ชื่อฐานข้อมูล"], "ใช้ทดสอบเซิร์ฟเวอร์ที่รันบนเครื่องตัวเอง"),
+ ("หยุดเซิร์ฟเวอร์ Node.js ที่รันอยู่ใน terminal ด้วยปุ่มอะไร?", ["Ctrl+C", "Ctrl+V", "Ctrl+S", "Ctrl+Z"], "Ctrl+C = หยุดโปรแกรมที่กำลังรัน"),
+ ("ติดตั้ง Express ด้วยคำสั่งใด?", ["`npm install express`", "`node express`", "`npm init express`", "`npm start express`"], "ติดตั้งแล้วจะถูกเพิ่มใน dependencies ของ package.json"),
+ ("`app.use(router)` ทำอะไร?", ["ลงทะเบียน router ให้แอปใช้งาน", "ลบ router", "เปิดพอร์ต", "สร้างฐานข้อมูล"], "ถ้าไม่ลงทะเบียน routes ใน router จะไม่ทำงาน"),
+ ("route หนึ่งเส้นประกอบด้วยอะไร?", ["HTTP method และ path เช่น GET /shabu", "ชื่อไฟล์และนามสกุล", "รหัสผ่านและ cookie", "IP และ port"], "เช่น `POST /user/add`"),
+ ("ใน HTML ต้องการใช้ไฟล์ `mystyle.css` ที่อยู่ในโฟลเดอร์ static ควรเขียน `href` อย่างไร?", ["`/mystyle.css`", "`../public/mystyle.css`", "`C:/public/mystyle.css`", "`http://mystyle`"], "โฟลเดอร์ static ถือเป็น root ของ path"),
+ ("`app.use('/product', router1)` และใน router1 มี `get('/add')` URL เต็มคืออะไร?", ["`/product/add`", "`/add/product`", "`/add`", "`/product`"], "path ที่ mount + path ใน router = URL เต็ม"),
+ ("ฟอร์ม POST ต้องใช้ `express.urlencoded()` เพราะอะไร?", ["เพื่อให้อ่านข้อมูลจากฟอร์มผ่าน `req.body` ได้", "เพื่อเข้ารหัสรหัสผ่าน", "เพื่อเปิดพอร์ต", "เพื่อลบ cookie"], "ถ้าไม่มี `req.body` จะไม่มีค่า"),
+ ("ควรตรวจสอบข้อมูลที่ผู้ใช้กรอกในฟอร์มที่ใด?", ["ที่เบราว์เซอร์ และตรวจซ้ำที่เซิร์ฟเวอร์", "ไม่ต้องตรวจเลย", "ที่ไฟล์ .env", "ที่ฐานข้อมูลเท่านั้น"], "ตรวจที่เบราว์เซอร์ช่วยผู้ใช้ ตรวจที่ server ป้องกันข้อมูลผิดก่อนลง DB"),
+ ("หน้า `/restrict` ตรวจ cookie ถ้าผู้ใช้ไม่มี cookie ควรตอบสถานะใด?", ["401 (ไม่มีสิทธิ์เข้าถึง)", "200 (สำเร็จ)", "404 (ไม่พบหน้า)", "500 (เซิร์ฟเวอร์พัง)"], "401 = Unauthorized"),
+ ("ในการตั้งค่า session ตัว `secret` ใช้ทำอะไร?", ["ใช้ลงนาม (sign) session ID", "เก็บรหัสผ่านผู้ใช้", "เป็นชื่อฐานข้อมูล", "เป็นหมายเลขพอร์ต"], "ค่า secret มักเก็บใน .env เช่น `SESSION_SECRET`"),
+ ("`mysql.createConnection({...})` ใช้ใส่ค่าอะไรบ้าง?", ["host, user, password, database ของฐานข้อมูล", "ชื่อไฟล์ HTML", "สีและฟอนต์", "ชื่อ cookie"], "ค่าเหล่านี้มักอ่านจาก `process.env`"),
+ ("ผล `results` ที่ได้จากคำสั่ง SELECT มีลักษณะอย่างไร?", ["array ของแถวข้อมูล", "ตัวเลขตัวเดียว", "ไฟล์ HTML", "ข้อความ OK"], "ส่งกลับด้วย `res.send(results)` จะได้ JSON"),
+ ("ใน SQL `WHERE` ใช้ทำอะไร?", ["กำหนดเงื่อนไขกรองแถวข้อมูล", "เรียงลำดับข้อมูล", "สร้างตาราง", "ลบฐานข้อมูล"], "เช่น `WHERE dept_code='CIS'`"),
+ ("ทำไมไม่ควรเก็บข้อมูลลับ เช่น รหัสผ่าน ไว้ใน cookie?", ["เพราะผู้ใช้เปิดอ่าน cookie ในเบราว์เซอร์ได้", "เพราะ cookie ใหญ่เกินไป", "เพราะ cookie ใช้กับ Node.js ไม่ได้", "เพราะ cookie ลบไม่ได้"], "cookie อยู่ฝั่ง client ข้อมูลลับควรอยู่ใน session ที่ server"),
+]
+
 # ---------- ตัวสร้างข้อสอบ ----------
 LETTERS = "กขคง"
 WEBQ = {}
@@ -426,6 +542,8 @@ qf, kf = build_quiz(FINAL)
 qx, kx = build_quiz(PX)
 q2f, k2f = build_quiz(F2)
 q3f, k3f = build_quiz(F3)
+for _z in (Z1, Z2, Z3, Z4, Z5):
+    build_quiz(_z)
 
 cheat = "".join(f'<div class="ch"><b>{a}</b><span>{b}</span></div>' for a, b in CHEAT)
 
@@ -621,7 +739,7 @@ def _items(items):
     return [{"q": q, "o": o, "a": a, "e": e} for n, q, o, a, e in WEBQ[id(items)]]
 
 SETS = {
-    "x": {"name": "ซ้อมสอบ", "lec": ["ซ้อมสอบ · Basic 10 ข้อ"], "cut": [10], "items": _items(PX)},
+    "x": {"name": "ซ้อมสอบ 1", "lec": ["ซ้อมสอบ · Basic 10 ข้อ"], "cut": [10], "items": _items(PX)},
     "p1": {"name": "Part 1", "lec": ["Lecture 9 · Node.js"], "cut": [10], "items": _items(P1)},
     "p2": {"name": "Part 2", "lec": ["Lecture 10 · Express"], "cut": [10], "items": _items(P2)},
     "p3": {"name": "Part 3", "lec": ["Lecture 11 · Cookie/Session/DB"], "cut": [10], "items": _items(P3)},
@@ -629,6 +747,11 @@ SETS = {
           "cut": [10, 20, 30], "items": _items(FINAL)},
     "f2": {"name": "ข้อสอบรวม 2", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [10, 20, 30], "items": _items(F2)},
     "f3": {"name": "ข้อสอบรวม 3", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [10, 20, 30], "items": _items(F3)},
+    "z1": {"name": "ซ้อมสอบ 2", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [7, 14, 20], "items": _items(Z1)},
+    "z2": {"name": "ซ้อมสอบ 3", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [7, 14, 20], "items": _items(Z2)},
+    "z3": {"name": "ซ้อมสอบ 4", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [7, 14, 20], "items": _items(Z3)},
+    "z4": {"name": "ซ้อมสอบ 5", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [7, 14, 20], "items": _items(Z4)},
+    "z5": {"name": "ซ้อมสอบ 6", "lec": ["Lecture 9 · Node.js", "Lecture 10 · Express", "Lecture 11 · Cookie/Session/DB"], "cut": [7, 14, 20], "items": _items(Z5)},
 }
 
 QCSS = """
@@ -751,7 +874,7 @@ web = ('<!doctype html><html lang="th"><head><meta charset="utf-8">'
  '<button class="tgl" id="fm" aria-label="ลดขนาดตัวอักษร">ก−</button><button class="tgl" id="fp" aria-label="เพิ่มขนาดตัวอักษร">ก+</button>'
  '<button class="tg" id="tg" aria-label="สลับธีมสว่าง/มืด">☀/🌙 ธีม</button></nav><main>'
  '<div class="hero"><span class="tag">ITDS241 · Web Technologies and Application</span><h1>Node.js สรุปสอบ + ฝึกข้อสอบ</h1>'
- '<p>Lecture 09–11 · สรุป ~15 นาที · ข้อสอบ 10 ข้อ/พาร์ท + ข้อสอบรวม 30 ข้อ · ดูผลถูก-ผิดรายข้อได้</p></div>'
+ '<p>Lecture 09–11 · สรุป ~15 นาที · ซ้อมสอบ 6 ชุด + ข้อสอบ 10 ข้อ/พาร์ท + ข้อสอบรวม 3 ชุด · ดูผลถูก-ผิดรายข้อได้</p></div>'
  + wsec("p1", "1", "Intro to Node.js", "Lecture 09 · Part I", S1)
  + wsec("p2", "2", "Express Framework", "Lecture 10 · Part II", S2)
  + wsec("p3", "3", "Cookie, Session, Database", "Lecture 11 · Part III", S3)
