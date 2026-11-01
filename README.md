@@ -6,6 +6,8 @@
 
 อ่านสรุปจบใน ~15 นาที แล้วฝึกข้อสอบ 130 ข้อ ดูผลถูก–ผิดรายข้อได้ทันที
 
+### [▶ กดเปิดอ่าน / ทำข้อสอบเลย](https://thinnaphat-tht.github.io/ITDS241-NodeJS-Quiz/ITDS241-NodeJS-Summary-Quiz.html)
+
 ![Lecture](https://img.shields.io/badge/Lecture-09%E2%80%9311-3b82f6?style=for-the-badge)
 ![Questions](https://img.shields.io/badge/ข้อสอบ-130%20ข้อ-2563eb?style=for-the-badge)
 ![Format](https://img.shields.io/badge/HTML-ไฟล์เดียว-1d4ed8?style=for-the-badge)
@@ -19,8 +21,8 @@
 
 ## เริ่มใช้งาน
 
-1. กดไฟล์ [`ITDS241-NodeJS-Summary-Quiz.html`](ITDS241-NodeJS-Summary-Quiz.html) แล้วกด **Download raw file**
-2. ดับเบิลคลิกเปิดในเบราว์เซอร์ ใช้ได้เลย ไม่ต้องลงอะไรเพิ่ม ไม่ต้องต่อเน็ต (ฟอนต์จะสวยขึ้นถ้าต่อเน็ต)
+- **ออนไลน์:** กด [ลิงก์นี้](https://thinnaphat-tht.github.io/ITDS241-NodeJS-Quiz/ITDS241-NodeJS-Summary-Quiz.html) เปิดได้ทั้งมือถือและคอม
+- **ออฟไลน์:** โหลด [`ITDS241-NodeJS-Summary-Quiz.html`](ITDS241-NodeJS-Summary-Quiz.html) (ปุ่ม Download raw file) แล้วดับเบิลคลิกเปิดในเบราว์เซอร์ ไม่ต้องลงอะไรเพิ่ม (ฟอนต์จะสวยขึ้นถ้าต่อเน็ต)
 
 ## ในไฟล์มีอะไร
 
